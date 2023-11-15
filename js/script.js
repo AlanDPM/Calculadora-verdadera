@@ -1,76 +1,76 @@
-function SP(side){
+function SPer(side){
     return side*4;
 }
-function squarePerimeterCalculate(){
+function SPCalculate(){
     const numberside=document.getElementById("squareInput");
     const result= parseInt(numberside.value);
 
-    const perimeter = SP(result);
-    document.getElementById("SP").innerText= "It's perimeter is " + perimeter + " cm";
+    const perimeter = SPer(result);
+    document.getElementById("SPer").innerText= "It's perimeter is " + perimeter + " cm";
 }
 
-function SA(side){
+function SArea(side){
     return side*side;
 }
-function squareAreaCalculate(){
+function SACalculate(){
     const numberside=document.getElementById("squareInput");
     const result=parseInt(numberside.value);
     
-    const area =SA(result);
-    document.getElementById("SA").innerText="The Area of the Square is "+area+" cm^2";
+    const area =SArea(result);
+    document.getElementById("SArea").innerText="The Area of the Square is "+area+" cm^2";
 }
 
-  function CP(radio){
+  function CPer(radio){
     return Math.PI*2*radio;
 }
 
-function circlePerimeterCalculate(){
+function CPCalculate(){
     const numberside=document.getElementById("circleInput");
     const result= parseInt(numberside.value);
 
-    const perimeter = CP(result);
-    document.getElementById("CP").innerText= "It's perimeter is " + perimeter + " cm";
+    const perimeter = CPer(result);
+    document.getElementById("CPer").innerText= "It's perimeter is " + perimeter + " cm";
 }
 
-function CA(radio){
+function CArea(radio){
     return Math.PI*Math.pow(radio,2);
 }
-function circleAreaCalculate(){
+function CACalculate(){
     const numberside=document.getElementById("circleInput");
     const result=parseInt(numberside.value);
     
-    const area =CA(result);
-    document.getElementById("CA").innerText="The Area of the circle is "+area+" cm^2";
+    const area =CArea(result);
+    document.getElementById("CArea").innerText="The Area of the circle is "+area+" cm^2";
 }
 
-function TP (side1, side2, base) {
+function TPer (side1, side2, base) {
     return side1 + side2 + base;
 }
 
-function trianglePerimeterCalculate() {
+function TPCalculate() {
     const side1 = parseInt(document.getElementById("triangleInput1").value);
     const side2 = parseInt(document.getElementById("triangleInput2").value);
     const base = parseInt(document.getElementById("triangleInputB").value);
 
-    const perimeter = TP(side1,side2,base);
+    const perimeter = TPer(side1,side2,base);
 
-    document.getElementById("TP").innerText = "Its perimeter is: " + perimeter + " cm.";
+    document.getElementById("TPer").innerText = "Its perimeter is: " + perimeter + " cm.";
 }
-function TA (base, h) {
+function TArea (base, h) {
     return (base * h) / 2;
 }
-function triangleAreaCalculate() {
+function TACalculate() {
     const base = parseInt(document.getElementById("triangleInputB").value);
-    const h = parseInt(document.getElementById("triangleInputH").value);
+    const altura = parseInt(document.getElementById("triangleInputH").value);
 
-    const area = TA(base, h);
+    const area = TArea(base, altura);
 
-    document.getElementById("TA").innerText = "Its area is "+area+" cm^2";
+    document.getElementById("TArea").innerText = "Its area is "+area+" cm^2";
 }
 
-function clearSquare(){
-    const cleanParagrahp1 = document.getElementById("SA");
-    const cleanParagrahp2 = document.getElementById("SP");
+function clearS(){
+    const cleanParagrahp1 = document.getElementById("SArea");
+    const cleanParagrahp2 = document.getElementById("SPer");
     let display = document.getElementById("squareInput");
 
     cleanParagrahp1.innerText = "";
@@ -78,9 +78,9 @@ function clearSquare(){
     display.value="";
 }
 
-function clearCircle(){
-    const cleanParagrahp1 = document.getElementById("CA");
-    const cleanParagrahp2 = document.getElementById("CP");
+function clearC(){
+    const cleanParagrahp1 = document.getElementById("CArea");
+    const cleanParagrahp2 = document.getElementById("CPer");
     let display = document.getElementById("circleInput");
 
     cleanParagrahp1.innerText = "";
@@ -88,9 +88,9 @@ function clearCircle(){
     display.value="";
 }
 
-function clearTriangle(){
-    const cleanParagrahp1 = document.getElementById("TA");
-    const cleanParagrahp2 = document.getElementById("TP");
+function clearT(){
+    const cleanParagrahp1 = document.getElementById("TArea");
+    const cleanParagrahp2 = document.getElementById("TPer");
     const TRII = document.getElementById("triangleInput1");
     const TRI2 = document.getElementById("triangleInput2");
     const TRIB = document.getElementById("triangleInputB");

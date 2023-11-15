@@ -27,12 +27,12 @@
                     </label> 
                     </div>
                     <input type="number" id="squareInput">
-                    <p id="SP"></p>
-                    <p id="SA"></p>
+                    <p id="SPer"></p>
+                    <p id="SArea"></p>
                     <div>
-                    <button type="button" onclick="squarePerimeterCalculate()" class="boton">Calculate perimeter</button>
-                    <button type="button" onclick="squareAreaCalculate()" class="boton">Calculate area</button>
-                    <button type="reset" onclick="clearSquare()" class="boton">Reset</button>                    
+                    <button type="button" onclick="SPCalculate()" class="boton">Calculate perimeter</button>
+                    <button type="button" onclick="SACalculate()" class="boton">Calculate area</button>
+                    <button type="reset" onclick="clearS()" class="boton">Reset</button>                    
                 </div>
             </form>
         </section> 
@@ -48,12 +48,12 @@
                     </label>
                     </div>
                     <input type="number" id="circleInput">
-                    <p id="CP"></p>
-                    <p id="CA"></p>
+                    <p id="CPer"></p>
+                    <p id="CArea"></p>
                     <div>
-                    <button type="button" onclick="circlePerimeterCalculate()" class="boton">Calculate perimeter</button>
-                    <button type="button" onclick="circleAreaCalculate()" class="boton">Calculate area</button>
-                    <button type="reset" onclick="clearCircle()" class="boton">Reset</button>                    
+                    <button type="button" onclick="CPCalculate()" class="boton">Calculate perimeter</button>
+                    <button type="button" onclick="CACalculate()" class="boton">Calculate area</button>
+                    <button type="reset" onclick="clearC()" class="boton">Reset</button>                    
                     
                 </div>
             </form>
@@ -64,7 +64,7 @@
         <section>
             <h2 class="h2"> Calculate the area and perimeter of a triangle</h2>
             <form>
-                <div class="contT">
+                <div class="contText">
                     <div>
                     <div> 
                     <label for="triangleInput1"> 
@@ -79,7 +79,7 @@
                     </label>
                     </div>
                     <input type="number" id="triangleInputB">
-                    <p id="TP"></p>
+                    <p id="TPer"></p>
                     </div>
                     </div>
 <div>                
@@ -95,13 +95,13 @@
                     </label>
                     </div>
                     <input type="number" id="triangleInputH">
-                    <p id="TA"></p>
+                    <p id="TArea"></p>
                     </div>  
                     </div>
                     <div>
-                    <button type="button" onclick="trianglePerimeterCalculate()" class="boton">Calculate perimeter</button>
-                    <button type="button" onclick="triangleAreaCalculate()"class="boton">Calculate area</button>
-                    <button type="reset" onclick="clearTriangle()" class="boton">Reset</button>                    
+                    <button type="button" onclick="TPCalculate()" class="boton">Calculate perimeter</button>
+                    <button type="button" onclick="TACalculate()"class="boton">Calculate area</button>
+                    <button type="reset" onclick="clearT()" class="boton">Reset</button>                    
 
                 </div>
             </form>
