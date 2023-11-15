@@ -9,7 +9,6 @@ function squarePerimeterCalculate(){
     document.getElementById("SP").innerText= "It's perimeter is " + perimeter + " cm";
 }
 
-//Calcular el área del cuadrado
 function SA(side){
     return side*side;
 }
@@ -21,8 +20,6 @@ function squareAreaCalculate(){
     document.getElementById("SA").innerText="The Area of the Square is "+area+" cm^2";
 }
 
-
-  //CALCULO DEl PERIMETRO CIRCULO------------------------------------------------------------------------
   function CP(radio){
     return Math.PI*2*radio;
 }
@@ -35,7 +32,6 @@ function circlePerimeterCalculate(){
     document.getElementById("CP").innerText= "It's perimeter is " + perimeter + " cm";
 }
 
-//Calcular el área del circle
 function CA(radio){
     return Math.PI*Math.pow(radio,2);
 }
@@ -46,11 +42,6 @@ function circleAreaCalculate(){
     const area =CA(result);
     document.getElementById("CA").innerText="The Area of the circle is "+area+" cm^2";
 }
-
-
- //CALCULO DE TRIANGULO--------------------------------------------------------------------------------
-
-
 
 function TP (side1, side2, base) {
     return side1 + side2 + base;
@@ -77,8 +68,7 @@ function triangleAreaCalculate() {
     document.getElementById("TA").innerText = "Its area is "+area+" cm^2";
 }
 
-
-function cleanSquare(){
+function clearSquare(){
     const cleanParagrahp1 = document.getElementById("SA");
     const cleanParagrahp2 = document.getElementById("SP");
     let display = document.getElementById("squareInput");
@@ -88,7 +78,7 @@ function cleanSquare(){
     display.value="";
 }
 
-function cleanCircle(){
+function clearCircle(){
     const cleanParagrahp1 = document.getElementById("CA");
     const cleanParagrahp2 = document.getElementById("CP");
     let display = document.getElementById("circleInput");
@@ -98,7 +88,7 @@ function cleanCircle(){
     display.value="";
 }
 
-function cleanTriangle(){
+function clearTriangle(){
     const cleanParagrahp1 = document.getElementById("TA");
     const cleanParagrahp2 = document.getElementById("TP");
     const TRII = document.getElementById("triangleInput1");

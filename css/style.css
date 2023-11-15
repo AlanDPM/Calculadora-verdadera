@@ -41,7 +41,7 @@ body{
     padding-bottom: 10%;
 }
 
-.contenedorAzul{
+.contend{
     background-color: rgb(13, 35, 73);
     color: white;
     width: 422px;
@@ -64,17 +64,6 @@ p{
     
 }
 
-
-.columna{
-padding-left: 10px;
-}
-
-.container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
-}
-
 input[type="number"]{
     width: 98%;
     padding: 25px;
@@ -90,7 +79,7 @@ label{
     padding-left: 2%;
 }
 
-.btn{
+.boton{
     background-color: rgb(248, 135, 5);
     color: rgb(255, 255, 255);
     border: 0;
