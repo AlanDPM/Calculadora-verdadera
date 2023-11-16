@@ -18,95 +18,47 @@
     <figure class="geo">
         <img src="img/triangulo.png" alt="Preview">
     </figure>
-    <div class="contend">
-        <section>
-            <h2 class="h2"> Calculate the area and perimeter of a squeare</h2>
-                <div>
-                    <label for="squareInput"> 
-                        How long is each side?
-                    </label> 
-                    </div>
-                    <input type="number" id="squareInput">
-                    <p id="SPer"></p>
-                    <p id="SArea"></p>
-                    <div>
-                    <button type="button" onclick="SPCalculate()" class="boton">Calculate perimeter</button>
-                    <button type="button" onclick="SACalculate()" class="boton">Calculate area</button>
-                    <button type="reset" onclick="clearS()" class="boton">Reset</button>                    
-                </div>
-            </form>
-        </section> 
-    </div>
+   <!-- Cuadrado -->
+   <form id="cuadradoForm">
+    <h2>Cuadrado</h2>
+    <label for="ladoCuadrado">Lado del cuadrado:</label>
+    <input type="number" id="ladoCuadrado" required>
+    <br>
+    <button type="button" onclick="calcularCuadrado('perimetro')">Calcular Perímetro</button>
+    <button type="button" onclick="calcularCuadrado('area')">Calcular Área</button>
+    <button type="button" onclick="resetForm('cuadradoForm')">Reset</button>
+</form>
 
-    <div class="contend">
-        <section>
-            <h2 class="h2"> Calculate the area and perimeter of a circle </h2>
-            <form>
-                <div>
-                    <label for="circleInput"> 
-                        How long is the radio?
-                    </label>
-                    </div>
-                    <input type="number" id="circleInput">
-                    <p id="CPer"></p>
-                    <p id="CArea"></p>
-                    <div>
-                    <button type="button" onclick="CPCalculate()" class="boton">Calculate perimeter</button>
-                    <button type="button" onclick="CACalculate()" class="boton">Calculate area</button>
-                    <button type="reset" onclick="clearC()" class="boton">Reset</button>                    
-                    
-                </div>
-            </form>
-        </section>
-    </div>
-    
-    <div class="contend">
-        <section>
-            <h2 class="h2"> Calculate the area and perimeter of a triangle</h2>
-            <form>
-                <div class="contText">
-                    <div>
-                    <div> 
-                    <label for="triangleInput1"> 
-                        How long is the first side?
-                    </label>
-                    </div>
-                    <input type="number" id="triangleInput1">
-                    <div>
-                    <div>
-                    <label for="triangleInputB"> 
-                            How long is the base?
-                    </label>
-                    </div>
-                    <input type="number" id="triangleInputB">
-                    <p id="TPer"></p>
-                    </div>
-                    </div>
-<div>                
-    <div>
-        <label for="triangleInput2"> 
-            How long is the second side?
-                </label>
-                    </div>
-                    <input type="number" id="triangleInput2">
-                    <div>
-                    <label for="triangleInputH"> 
-                         How long is the height?
-                    </label>
-                    </div>
-                    <input type="number" id="triangleInputH">
-                    <p id="TArea"></p>
-                    </div>  
-                    </div>
-                    <div>
-                    <button type="button" onclick="TPCalculate()" class="boton">Calculate perimeter</button>
-                    <button type="button" onclick="TACalculate()"class="boton">Calculate area</button>
-                    <button type="reset" onclick="clearT()" class="boton">Reset</button>                    
+<!-- Círculo -->
+<form id="circuloForm">
+    <h2>Círculo</h2>
+    <label for="radioCirculo">Radio del círculo:</label>
+    <input type="number" id="radioCirculo" required>
+    <br>
+    <button type="button" onclick="calcularCirculo('perimetro')">Calcular Perímetro</button>
+    <button type="button" onclick="calcularCirculo('area')">Calcular Área</button>
+    <button type="button" onclick="resetForm('circuloForm')">Reset</button>
+</form>
 
-                </div>
-            </form>
-        </section>
-</div>
+<!-- Triángulo -->
+<form id="trianguloForm">
+    <h2>Triángulo</h2>
+    <label for="lado1Triangulo">Lado 1:</label>
+    <input type="number" id="lado1Triangulo" required>
+    <br>
+    <label for="lado2Triangulo">Lado 2:</label>
+    <input type="number" id="lado2Triangulo" required>
+    <br>
+    <label for="baseTriangulo">Base:</label>
+    <input type="number" id="baseTriangulo" required>
+    <br>
+    <label for="alturaTriangulo">Altura:</label>
+    <input type="number" id="alturaTriangulo" required>
+    <br>
+    <button type="button" onclick="calcularTriangulo('perimetro')">Calcular Perímetro</button>
+    <button type="button" onclick="calcularTriangulo('area')">Calcular Área</button>
+    <button type="button" onclick="resetForm('trianguloForm')">Reset</button>
+</form>
 
             <script src="js/script.js"></script>
 </body>
