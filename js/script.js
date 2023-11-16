@@ -1,63 +1,67 @@
-function calcularCuadrado(tipo) {
-    const lado = parseFloat(document.getElementById('ladoCuadrado').value);
+function calculateSquare(type) {
+    const side = parseFloat(document.getElementById('sideSquare').value);
 
-    if (!isNaN(lado)) {
-        let resultado;
-        if (tipo === 'perimetro') {
-            resultado = 4 * lado;
-        } else if (tipo === 'area') {
-            resultado = lado * lado;
+    if (!isNaN(side)) {
+        let result;
+        if (type === 'perimeter') {
+            result = 4 * side;
+        } else if (type === 'area') {
+            result = side * side;
         }
 
-        mostrarResultado(resultado);
+        showResult(result, 'resultSquare');
     } else {
-        alert('Ingresa un valor válido para el lado del cuadrado.');
+        alert('Please enter a valid value for the square side length.');
     }
 }
 
-function calcularCirculo(tipo) {
-    const radio = parseFloat(document.getElementById('radioCirculo').value);
+function calculateCircle(type) {
+    const radius = parseFloat(document.getElementById('radiusCircle').value);
 
-    if (!isNaN(radio)) {
-        let resultado;
-        if (tipo === 'perimetro') {
-            resultado = 2 * Math.PI * radio;
-        } else if (tipo === 'area') {
-            resultado = Math.PI * radio * radio;
+    if (!isNaN(radius)) {
+        let result;
+        if (type === 'perimeter') {
+            result = 2 * Math.PI * radius;
+        } else if (type === 'area') {
+            result = Math.PI * radius * radius;
         }
 
-        mostrarResultado(resultado);
+        showResult(result, 'resultCircle');
     } else {
-        alert('Ingresa un valor válido para el radio del círculo.');
+        alert('Please enter a valid value for the circle radius.');
     }
 }
 
-function calcularTriangulo(tipo) {
-    const lado1 = parseFloat(document.getElementById('lado1Triangulo').value);
-    const lado2 = parseFloat(document.getElementById('lado2Triangulo').value);
-    const base = parseFloat(document.getElementById('baseTriangulo').value);
-    const altura = parseFloat(document.getElementById('alturaTriangulo').value);
+function calculateTriangle(type) {
+    const side1 = parseFloat(document.getElementById('side1Triangle').value);
+    const side2 = parseFloat(document.getElementById('side2Triangle').value);
+    const base = parseFloat(document.getElementById('baseTriangle').value);
+    const height = parseFloat(document.getElementById('heightTriangle').value);
 
-    if (!isNaN(lado1) && !isNaN(lado2) && !isNaN(base) && !isNaN(altura)) {
-        let resultado;
-        if (tipo === 'perimetro') {
-            resultado = lado1 + lado2 + base;
-        } else if (tipo === 'area') {
-            resultado = (base * altura) / 2;
+    if (!isNaN(side1) && !isNaN(side2) && !isNaN(base) && !isNaN(height)) {
+        let result;
+        if (type === 'perimeter') {
+            result = side1 + side2 + base;
+        } else if (type === 'area') {
+            result = (base * height) / 2;
         }
 
-        mostrarResultado(resultado);
+        showResult(result, 'resultTriangle');
     } else {
-        alert('Ingresa valores válidos para los lados y dimensiones del triángulo.');
+        alert('Please enter valid values for the triangle sides and dimensions.');
     }
 }
 
-function mostrarResultado(resultado) {
-    const resultadosDiv = document.getElementById('resultados');
-    resultadosDiv.innerHTML = `<p>El resultado es: ${resultado}</p>`;
+function showResult(result, resultId) {
+    const resultDiv = document.getElementById(resultId);
+    resultDiv.innerHTML = `<p>Result: ${result}</p>`;
 }
 
 function resetForm(formId) {
     document.getElementById(formId).reset();
-    document.getElementById('resultados').innerHTML = '';
+    clearResult(formId);
+}
+
+function clearResult(resultId) {
+    document.getElementById(resultId).innerHTML = '';
 }
